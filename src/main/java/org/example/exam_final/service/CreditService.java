@@ -1,7 +1,7 @@
 package org.example.exam_final.service;
 
 
-import com.votreNom.votrePrenom.gestioncredits.entity.Credit;
+import org.example.exam_final.entity.Credit;
 
 import java.util.List;
 

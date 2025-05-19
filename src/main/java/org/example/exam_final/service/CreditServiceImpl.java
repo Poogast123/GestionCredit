@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CreditServiceImpl implements CreditService {
+public abstract class CreditServiceImpl implements CreditService {
 
     @Autowired
     private CreditRepository creditRepository;
