@@ -1,4 +1,31 @@
 package org.example.exam_final.entity;
 
-public class CreditProfessionnel {
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class CreditProfessionnel extends Credit {
+
+    private String motif;
+
+    private String raisonSociale;
+
+    public String getMotif() {
+        return motif;
+    }
+
+    public void setMotif(String motif) {
+        this.motif = motif;
+    }
+
+    public String getRaisonSociale() {
+        return raisonSociale;
+    }
+
+    public void setRaisonSociale(String raisonSociale) {
+        this.raisonSociale = raisonSociale;
+    }
+
+
 }
+

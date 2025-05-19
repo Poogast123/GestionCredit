@@ -1,4 +1,9 @@
 package org.example.exam_final.repository;
 
-public class CreditRepository {
+import org.example.exam_final.entity.Credit;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CreditRepository extends JpaRepository<Credit, Long> {
 }
+
+

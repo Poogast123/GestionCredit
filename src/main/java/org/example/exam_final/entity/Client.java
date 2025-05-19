@@ -3,6 +3,8 @@ package org.example.exam_final.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -15,4 +17,7 @@ public class Client {
     private String nom;
     private String prenom;
     private String email;
+
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+    private List<Credit> credits;
 }

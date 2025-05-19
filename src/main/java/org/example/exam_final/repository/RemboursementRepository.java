@@ -1,4 +1,9 @@
 package org.example.exam_final.repository;
 
-public class RemboursementRepository {
+
+import org.example.exam_final.entity.Remboursement;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RemboursementRepository extends JpaRepository<Remboursement, Long> {
 }
+
