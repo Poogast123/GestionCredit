@@ -1,6 +1,5 @@
 package org.example.kharifi.oussama.dto;
 
-package com.votreNom.votrePrenom.gestioncredits.dto;
 
 public class AuthResponse {
     private String token;

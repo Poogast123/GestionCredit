@@ -1,9 +1,10 @@
 package org.example.kharifi.oussama.entity;
 
-package com.votreNom.votrePrenom.gestioncredits.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "users")
 public class User {
@@ -17,8 +18,7 @@ public class User {
 
     private String password;
 
-    private String role;  // Exemple : USER, ADMIN
+    private String role;
 
-    // Getters & setters
 }
 

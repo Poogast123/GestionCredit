@@ -1,0 +1,165 @@
+openapi: 3.0.3
+info:
+  title: API Documentation - Auth, Clients, Credits
+  version: 1.0.0
+  description: Documentation des API pour l'authentification, la gestion des clients et des crédits.
+
+paths:
+  /api/auth/login:
+    post:
+      summary: Authentification utilisateur
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequest'
+      responses:
+        '200':
+          description: JWT généré
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '401':
+          description: Nom d'utilisateur ou mot de passe incorrect
+
+  /api/clients:
+    get:
+      summary: Obtenir la liste des clients
+      responses:
+        '200':
+          description: Liste des clients
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ClientDTO'
+    post:
+      summary: Enregistrer un nouveau client
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClientDTO'
+      responses:
+        '200':
+          description: Client enregistré
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClientDTO'
+
+  /api/credits:
+    get:
+      summary: Obtenir la liste des crédits
+      responses:
+        '200':
+          description: Liste des crédits
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Credit'
+    post:
+      summary: Ajouter un nouveau crédit
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Credit'
+      responses:
+        '200':
+          description: Crédit ajouté
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Credit'
+
+  /api/credits/{id}:
+    get:
+      summary: Obtenir un crédit par ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Crédit correspondant
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Credit'
+    delete:
+      summary: Supprimer un crédit par ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Crédit supprimé
+
+components:
+  schemas:
+    AuthRequest:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+      required:
+        - username
+        - password
+
+    AuthResponse:
+      type: object
+      properties:
+        jwt:
+          type: string
+
+    ClientDTO:
+      type: object
+      properties:
+        id:
+          type: integer
+        nom:
+          type: string
+        prenom:
+          type: string
+        email:
+          type: string
+      required:
+        - nom
+        - prenom
+        - email
+
+    Credit:
+      type: object
+      properties:
+        id:
+          type: integer
+        montant:
+          type: number
+          format: double
+        taux:
+          type: number
+          format: double
+        duree:
+          type: integer
+        clientId:
+          type: integer
+      required:
+        - montant
+        - taux
+        - duree
+        - clientId

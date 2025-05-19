@@ -1,7 +1,7 @@
 package org.example.kharifi.oussama.repository;
 
 
-import com.votreNom.votrePrenom.gestioncredits.entity.User;
+import org.example.kharifi.oussama.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

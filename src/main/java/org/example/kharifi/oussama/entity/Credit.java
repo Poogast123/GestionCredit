@@ -2,9 +2,11 @@ package org.example.kharifi.oussama.entity;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.util.List;
-
+@Data
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Credit {

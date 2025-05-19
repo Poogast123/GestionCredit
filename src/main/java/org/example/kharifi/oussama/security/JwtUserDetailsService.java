@@ -1,8 +1,8 @@
 package org.example.kharifi.oussama.security;
 
 
-import com.votreNom.votrePrenom.gestioncredits.entity.User;
-import com.votreNom.votrePrenom.gestioncredits.repository.UserRepository;
+import org.example.kharifi.oussama.entity.User;
+import org.example.kharifi.oussama.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,5 @@
 package org.example.kharifi.oussama.mapper;
 
-
-
 import org.example.kharifi.oussama.dto.CreditDTO;
 import org.example.kharifi.oussama.entity.Credit;
 

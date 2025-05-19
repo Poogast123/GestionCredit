@@ -2,8 +2,10 @@ package org.example.kharifi.oussama.entity;
 
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
+import lombok.Data;
 
+import java.time.LocalDate;
+@Data
 @Entity
 public class Remboursement {
 
