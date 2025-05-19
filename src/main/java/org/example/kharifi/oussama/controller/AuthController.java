@@ -1,10 +1,10 @@
 package org.example.kharifi.oussama.controller;
 
 
-import com.votreNom.votrePrenom.gestioncredits.dto.AuthRequest;
-import com.votreNom.votrePrenom.gestioncredits.dto.AuthResponse;
-import com.votreNom.votrePrenom.gestioncredits.security.JwtUtil;
-import com.votreNom.votrePrenom.gestioncredits.security.JwtUserDetailsService;
+import org.example.kharifi.oussama.dto.AuthRequest;
+import org.example.kharifi.oussama.dto.AuthResponse;
+import org.example.kharifi.oussama.security.JwtUtil;
+import org.example.kharifi.oussama.security.JwtUserDetailsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.userdetails.UserDetails;
